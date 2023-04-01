@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'Jura';
+    src: url(fonts/Jura-Light.ttf);
+    font-family:'JuraB';
+    src: url(fonts/Jura-Bold.ttf);font-family: 'Centauri';
+    src: url(fonts/FontsFree-Net-Centauri.ttf);
+    
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 10px;
+
+    }
+
+    body {
+        background: url(webimage/robo.gif);
+
+        background-size: 100% 100%; 
+        font-family: 'Jura';
+      }
+      
+    .container{
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 3rem;
+        margin-top: 4rem;
+        text-align: center;
+    }
+    .image img {
+        width: 200px;
+        height: auto;
+        margin-top: 5rem;
+        margin-bottom:5rem;
+      }
+      h1{
+        color: white;
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 8px;
+        margin-bottom: 2rem;
+        font-family: 'JuraB';
+      }
+      h2{
+        color:#ffAE42;
+        font-size: 4rem;
+        font-weight: 400;
+      }
+      p{
+        font-size:2rem;
+        color: black;
+        line-height: 5rem;
+        margin-bottom: 5rem; color:white;
+        font-family: 'JuraB';
+      
+      }
+      button{
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid #fcae1e; 
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      span{
+        background: linear-gradient(90deg, #ffaf00, #ff4700); 
+        height: 100%;
+        width: 0%;
+        border-radius:25px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+        filter: brightness(150%);
+    }
+    
+    
+      button:hover span{
+        width:100%;
+    
+    
+      }
+      button :hover{
+        border:none;
+      }
+  
+      
+     
+      p {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        animation: glitch-text 5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #76ba1b, 0 0 35px #76ba1b, 0 0 40px #76ba1b, 0 0 50px #76ba1b;
+      }
+      
+      p {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #76ba1b, 0 0 35px #76ba1b, 0 0 40px #76ba1b, 0 0 50px #76ba1b;
+        animation: typing 5s steps(25, end), glitch-text 5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      }
+      
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      
+      @keyframes glitch-text {
+        0% {
+          transform: translateY(100%);
+        }
+        10% {
+          transform: translateY(0%);
+          opacity: 1;
+        }
+        20% {
+          opacity: 1;
+        }
+        30% {
+          opacity: 0;
+        }
+        31% {
+          opacity: 1;
+        }
+        32% {
+          opacity: 0;
+        }
+        33% {
+          opacity: 1;
+        }
+        50% {
+          transform: translateX(-10px);
+        }
+        52% {
+          transform: translateX(10px);
+        }
+        54% {
+          transform: translateX(-10px);
+        }
+        56% {
+          transform: translateX(10px);
+        }
+        58% {
+          transform: translateX(-10px);
+        }
+        60% {
+          transform: translateX(10px);
+        }
+        62% {
+          transform: translateX(-10px);
+        }
+        64% {
+          transform: translateX(10px);
+        }
+        
+      }h1, h2 {
+        display: inline-block;
+        opacity: 0;
+        animation: flicker 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      }
+      
+      @keyframes flicker {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #76ba1b, 0 0 70px #76ba1b, 0 0 80px #76ba1b, 0 0 100px #76ba1b;
+        }
+        20% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+          text-shadow: 0 0 10px #76ba1b, 0 0 20px #76ba1b, 0 0 30px #76ba1b, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff;
+        }
+        40% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #76ba1b, 0 0 70px #76ba1b, 0 0 80px #76ba1b, 0 0 100px #76ba1b;
+        }
+        60% {
+          opacity: 0;
+        }
+        70% {
+          opacity: 1;
+          text-shadow: 0 0 10px #76ba1b, 0 0 20px#76ba1b, 0 0 30px#76ba1b, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff;
+        }
+        80% {
+          opacity: 0;
+        }
+        90% {
+          opacity: 1;
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px#76ba1b, 0 0 70px #76ba1b, 0 0 80px #76ba1b, 0 0 100px #76ba1b;
+        }
+        100% {
+          opacity: 1;
+          text-shadow: none;
+        }
+      }

@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Centauri';
+    src: url(fonts/FontsFree-Net-Centauri.ttf);
+    }
+    *{
+    
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Centauri';
+    } .logo {
+        width: 80px;
+        height: auto;
+      }
+      .logo-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+      }    
+    
+    body{
+        display: flex;
+        justify-content: center;
+        background-color: #292929;
+        min-height: 100vh;
+        background: url("webimage/darkcity.jpg");
+    background-size: cover;
+        
+    }
+    .box{
+        position:relative;
+        margin-top: 100px;
+        width: 380px;
+        height: 500px;
+        background: #292929;
+        border-radius: 8px;
+        overflow: hidden;
+        transform: translateX(-25px);
+    }
+    .box::before{
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 420px;
+        background: linear-gradient(0deg, transparent, orange,orange);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+    }
+    .box::after{
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 420px;
+        background: linear-gradient(0deg, transparent,orange,orange);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        animation-delay: -3s;
+    }
+    @keyframes animate
+    {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%
+        {
+            transform: rotate(360deg);
+        }
+    }
+    .form{
+       position: absolute;
+       inset: 2px;
+       border-radius: 8px;
+       background: #141414;
+       z-index: 10;
+       padding: 40px 40px;
+       display: flex;
+       flex-direction: column;
+    }
+    .form h1{
+        color: orange;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 0.1cm;
+        font-size: 1em;    
+    }
+    .inputBox{
+        position:relative;
+        width:300px;
+        margin-top: 35px;
+        
+    }
+    .inputBox input{
+    
+        position:relative;
+        width: 100%;
+        padding: 20px 10px 10px;
+        background: transparent;
+        border:none;
+        outline: none;
+        color: white;
+        font-size: 1em;
+        letter-spacing: 0.05;
+        z-index: 10;
+    
+    }
+    .inputBox span{
+        position: absolute;
+        left: 0;
+        padding: 20px 10px 10px;
+        font-size: 0.6em;
+        color: #c0c0c0;
+        pointer-events: none;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+    }
+    .inputBox input:valid ~ span,
+    .inputBox input:focus ~ span
+    {
+        color: orange;
+        transform: translateX(-10px) translateY(-34px);
+        font-size: 0.90em;
+    }
+    .inputBox i{
+        position:absolute;
+        left: 0;
+        bottom:0;
+        width: 100%;
+        height: 2px;
+        background: gray;
+        border-radius: 4px;
+        transition: 0.5s;
+        pointer-events: none;
+        z-index: 9;
+    }
+    .inputBox input:valid ~ i,
+    .inputBox input:focus ~ i
+    {
+        height: 44px;
+    }
+    input[type="submit"]{
+        border: none;
+        outline: none;
+        background: orange;
+        padding: 11px 15px;
+        width: 150px;
+        margin-top: 10px;
+        border-radius: 4px;
+        font-weight: 300;
+        cursor: pointer;
+        color: white;
+    }
+    .links{
+        display: flex;
+        justify-content: space-between;
+    }
+    .links a{
+        margin: 10px 0;
+        font-size: 0.5em;
+        color: #909090;
+        transition: 0.5s;
+        
+    }
+    A:hover { COLOR: orange; TEXT-DECORATION: none; font-weight: none }
+    
+    
+    
+    @media screen and (max-width:700px){
+        #form{
+            width:65%;
+            padding: 40px;
+        }
+    }

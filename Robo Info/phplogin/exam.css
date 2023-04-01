@@ -1,0 +1,418 @@
+@font-face {
+    font-family: 'Jura';
+    src: url(fonts/Jura-Light.ttf);
+    font-family:'JuraB';
+    src: url(fonts/Jura-Bold.ttf);
+    font-family: 'Centauri';
+    src:url(fonts/FontsFree-Net-Centauri.ttf);
+    
+    }
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #d6d6d6 #292929;
+      }
+      
+    *{
+    
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Centauri';
+        font-size: 20px;
+    }#answers {
+      margin-top: 20px;
+    }
+    #quiz-form{
+      margin-bottom: 0.2px;
+      
+    }.navbar ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+      } .navbar ul li a{
+    
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+      }.navbar ul li::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #ff8c00;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    
+      }.navbar ul li:hover:after{
+        width: 100%;
+    
+      }
+   
+    
+    body{
+        display: flex;
+        justify-content: center;
+        background-color: #292929;
+        min-height: 100vh;
+        background: url("webimage/quiz.gif");
+        background-size: 100% 100%;
+        
+    }.answer-buttons button {
+        display: block;
+        margin-bottom: 10px;
+        font-family: 'JuraB';
+      }
+      
+    .box{
+        position:relative;
+        margin-top: 70px;
+        width: 800px;
+        height: 550px;
+        background: #292929;
+        border-radius: 8px;
+        overflow: hidden;
+    
+    }
+    .logo {
+        width: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;}
+    .box::before{
+        content: '';
+        position: absolute;
+        top : -1%;
+        left: -1%;
+        width: 380px;
+        height: 420px;
+        background: linear-gradient(0deg, transparent, orange,orange);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+    }
+    .box::after{
+        content: '';
+        position: absolute;
+        top: -1%;
+        left: -1%;
+        width: 380px;
+        height: 420px;
+        background: linear-gradient(0deg, transparent,orange,orange);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        animation-delay: -3s;
+    }
+    @keyframes animate
+    {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%
+        {
+            transform: rotate(360deg);
+        }
+    }#question, button span {
+      color: #c0c0c0;
+    }#score {
+      color: orange;
+    }
+    
+    .form{
+        position: absolute;
+        inset: 3px;
+        border-radius: 8px;
+        background: #141414;
+        z-index: 10;
+        padding: 40px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* added this line to center items vertically */
+        align-items: center; /* added this line to center items horizontally */
+        font-size: 15px;
+        overflow: auto;
+        
+        scrollbar-width: thin;
+        scrollbar-color: black #1c1c1c;
+     }
+
+
+
+     
+     
+     ::-webkit-scrollbar {
+       width: 5px;
+       height: 5px;
+     }
+     
+     ::-webkit-scrollbar-thumb {
+       background-color: black;
+       border-radius: 10px;
+     }
+     
+     ::-webkit-scrollbar-track {
+       background-color: #1c1c1c;
+       border-radius: 10px;
+     }
+     
+     .form h1 {
+        color: orange;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 0.1cm;
+        font-size: 0.9em;
+        margin-bottom: 0px;
+        font-family: 'Centauri';
+        margin-left: 80px;
+        overflow: hidden;
+        border-right: .15em solid orange;
+        white-space: nowrap;
+      
+        animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+      }
+      
+      
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        20% { border-color: #b3b3b3}
+      }
+      
+      .form h1::after {
+        content: "";
+        display: inline-block;
+        width: 0.1em;
+        height: 1em;
+        vertical-align: bottom;
+       
+        animation: blink-caret 0.75s step-end infinite;
+      }
+      
+     .score{
+      font-family: 'Centauri';
+      font-size: 15px;
+     }
+     
+      
+    .inputBox{
+        position:relative;
+        width:300px;
+        margin-top: 35px;
+        
+    }.answer-buttons button {
+      border: none;
+    }
+    
+    .inputBox input{
+    
+        position:relative;
+        width: 100%;
+        padding: 20px 10px 10px;
+        background: transparent;
+        border:none;
+        outline: none;
+        color: white;
+        font-size: 1em;
+        letter-spacing: 0.05;
+        z-index: 10;
+    
+    }
+    .inputBox span{
+        position: absolute;
+        left: 0;
+        padding: 20px 10px 10px;
+        font-size: 0.6em;
+        color: #c0c0c0;
+        pointer-events: none;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+    }
+    .inputBox input:valid ~ span,
+    .inputBox input:focus ~ span
+    {
+        color: orange;
+        transform: translateX(-10px) translateY(-34px);
+        font-size: 0.90em;
+    }#username {
+        background-color: #292929;
+        border: none;
+        color: white;
+        font-family: 'jura';
+        font-size: 16px;
+        padding: 10px;
+        width: 50%;
+    }  #user{
+        font-family: 'Jura';
+      }.question {
+      font-family: 'Jura';
+      }
+     
+      .options {
+        font-family: 'Jura';
+        color:#FFA500;
+      }
+      
+    
+    .inputBox i{
+        position:absolute;
+        left: 0;
+        bottom:0;
+        width: 100%;
+        height: 2px;
+        background: gray;
+        border-radius: 4px;
+        transition: 0.5s;
+        pointer-events: none;
+        z-index: 9;
+    }
+    .inputBox input:valid ~ i,
+    .inputBox input:focus ~ i
+    {
+        height: 44px;
+    }
+    input[type="submit"]{
+        border: none;
+        outline: none;
+        background: orange;
+        padding: 11px 15px;
+        width: 150px;
+        margin-top: 12px;
+        border-radius: 4px;
+        font-weight: 300;
+        cursor: pointer;
+        color: white;
+        margin-bottom: 10px;
+        font-family: 'JuraB';
+    }
+    input[type="submit"]:hover{
+        background-color:#fcae1e;
+        color: white;
+    }#topic-btn {
+      border: none;
+      outline: none;
+      background: orange;
+      padding:11px 15px;
+      width: 150px;
+      margin-top: 20px;
+      border-radius: 4px;
+      font-weight: 300;
+      cursor: pointer;
+      color: white;
+      margin-bottom: 10px;
+      font-family: 'JuraB';
+      text-decoration: none;
+      margin-right: 100px;
+      
+      bottom: 5px;
+      right: 10px;
+      
+    }
+    
+    #topic-btn:hover {
+      background-color:#fcae1e;
+        color: white;
+    }
+    
+    .links{
+      display: flex;
+      justify-content: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+  }
+  
+  .links a{
+      margin: 0 10px 0 0;
+      font-size: 0.8em;
+      color: #c4c4c4;
+      transition: 0.5s;
+      text-decoration: none;
+      font-family: 'Centauri';
+  }.links i{
+    margin: 0 10px 0 0;
+    font-size: 0.8em;
+    color: #c4c4c4;
+    transition: 0.5s;
+    text-decoration: none;
+}
+  
+  
+
+    #next-btn { border: none;
+        outline: none;
+        background: #544c4a;
+        padding: 11px 15px;
+        width: 150px;
+        margin-top: 12px;
+        border-radius: 4px;
+        font-weight: 300;
+        cursor: pointer;
+        color: white;
+        margin-bottom: 10px;
+        font-family: 'JuraB';
+        position: absolute;
+        margin-left: 10px;
+        
+     
+       
+     
+      
+      }
+      
+      #next-btn:hover {
+        background-color: red;
+        color: white;
+      }
+      .score {
+        font-size: 25px;
+        font-family: 'juraB';
+        color: orange;
+        
+      }
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+ 
+  ::-webkit-scrollbar-track {
+    background: #292929;
+  }
+  
+ 
+  ::-webkit-scrollbar-thumb {
+    background: #d6d6d6;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+  }#next {
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+  }
+  
+ 
+  
+  
+    A:hover { COLOR: orange; TEXT-DECORATION: none; font-weight: none }
+
+    
+    
+    
+    
+    @media screen and (max-width:700px){
+        #form{
+            width:65%;
+            padding: 40px;
+        }
+    }
