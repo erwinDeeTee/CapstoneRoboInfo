@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Jura';
+    src: url(fonts/Jura-Light.ttf);
+    font-family:'JuraB';
+    src: url(fonts/Jura-Bold.ttf); 
+    font-family: 'Centauri';
+    src: url(fonts/FontsFree-Net-Centauri.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jura';
+}
+section{
+    position: relative;
+    background: #161623;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before{
+    content: '';
+    position: absolute;
+    width: 400px;;
+    height: 400px;
+    background: linear-gradient(#ff5F0c , #FEAA00);
+    border-radius: 50%;
+    transform: translate(-250px,-120px);
+}section::after{
+    content: '';
+    position: absolute;
+    width: 350px;;
+    height: 350px;
+    background: linear-gradient(#FEAA00 , #ff5F0c);
+    border-radius: 50%;
+    transform: translate(250px,150px);
+}
+.box {
+    position: relative;
+    min-width: 350px;
+    min-height: 400px;
+    background: rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 25px 45px rgba(0, 0, 0, 0.8); 
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    z-index: 10;
+    padding: 20px;
+    backdrop-filter: blur(25px);
+  }
+  
+  .box h3 {
+    color: orange;
+    margin: 0 0 10px;
+    font-family: 'Centauri';
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+  
+  .box h3::after {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: .3em;
+    height: 1.2em;
+    margin-left: .2em;
+    border-bottom: .1em solid orange;
+    animation: blink-caret .75s step-end infinite;
+  }
+  
+.list p {
+    margin: 0 0 10px; 
+    font-size: 24px;
+    text-align: center;
+    
+    position:relative;
+    color: aliceblue;
+}
+
+.list p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+}
+
+.list p::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 25px 45px rgba(0, 0, 0, 0.8); 
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.list p:hover {
+    background: rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 25px 45px rgba(0, 0, 0, 0.8); 
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.list p:hover .score {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.list p .score {
+    display: none;
+}
+
+
+.list p .score {
+    display: none;
+}
+.custom-link {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background-color: #FDB813;
+    color: #FFFFFF;
+    font-family: Centauri;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  .custom-link:hover {
+    background-color: #FFA500;
+    box-shadow: 0 0 1px #FFFFFF, 0 0 5px #FFFFFF, 0 0 10px #FFFFFF;
+  }
+  
+  .custom-link:active {
+    background-color: #FF6347;
+  }
+  
+  .custom-link:active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    animation: ripple 1s linear;
+    opacity: 0.5;
+  }
+  
+  @keyframes ripple {
+    to {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+  
+  
+  
